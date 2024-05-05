@@ -680,27 +680,17 @@ export function Settings() {
       <div className={styles["settings"]}>
         <List>
           <ListItem title={Locale.Settings.Avatar}>
-            <Popover
-              onClose={() => setShowEmojiPicker(false)}
-              content={
-                <AvatarPicker
-                  onEmojiClick={(avatar: string) => {
-                    updateConfig((config) => (config.avatar = avatar));
-                    setShowEmojiPicker(false);
-                  }}
-                />
+            <input
+              type="text"
+              value={config.avatar}
+              placeholder="AvatarID"
+              onChange={(e) =>
+                config.update(
+                  (config) => (config.avatar = e.currentTarget.value),
+                )
               }
-              open={showEmojiPicker}
-            >
-              <div
-                className={styles.avatar}
-                onClick={() => {
-                  setShowEmojiPicker(!showEmojiPicker);
-                }}
-              >
-                <Avatar avatar={config.avatar} />
-              </div>
-            </Popover>
+            ></input>
+            <Avatar avatar={config.avatar} />
           </ListItem>
 
           <ListItem
