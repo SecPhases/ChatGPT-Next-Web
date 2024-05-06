@@ -75,6 +75,7 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
 
 const LANG_KEY = "lang";
 const DEFAULT_LANG = "en";
+const MEOW_LANG = "me";
 
 const fallbackLang = en;
 const targetLang = ALL_LANGS[getLang()] as LocaleType;
@@ -98,12 +99,10 @@ function setItem(key: string, value: string) {
   } catch {}
 }
 
-const MEOW_LANG = 'me';
-
 function getLanguage() {
   try {
     const lang = navigator.language.toLowerCase();
-    return lang;
+    return lang.includes("cn") ? MEOW_LANG : lang;
   } catch {
     return DEFAULT_LANG;
   }
@@ -139,9 +138,6 @@ export function getISOLang() {
   };
 
   const lang = getLang();
-  if (lang === 'cn') {
-    return MEOW_LANG;
-  }
 
   return isoLangString[lang] ?? lang;
 }
