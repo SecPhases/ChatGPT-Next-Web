@@ -298,6 +298,10 @@ const jp: PartialLocaleType = {
     Topic: "トピック",
     Time: "時間",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default jp;

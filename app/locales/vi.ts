@@ -231,6 +231,10 @@ const vi: PartialLocaleType = {
     Topic: "Chủ đề",
     Time: "Thời gian",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default vi;

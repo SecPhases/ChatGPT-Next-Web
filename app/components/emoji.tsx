@@ -1,5 +1,8 @@
 import EmojiPicker, { Theme as EmojiTheme } from "emoji-picker-react";
-import { ModelType } from "../store";
+import {
+  ModelType,
+  useAppConfig,
+} from "../store";
 
 import BotIcon from "../icons/bot.svg";
 import BlackBotIcon from "../icons/black-bot.svg";
@@ -25,15 +28,16 @@ export function AvatarPicker(props: {
 }
 
 export function Avatar(props: { model?: ModelType; avatar?: string }) {
+  const config = useAppConfig()
   if (props.model) {
     return (
       <div className="no-dark">
         {props.model.startsWith("gpt-4") ? (
-          <BlackBotIcon className="user-avatar" />
+          <BlackBotIcon className="user-avatar" width={config.AvatarSize} height={config.AvatarSize} />
         ) : props.model?.startsWith("CatGirl") ? (
           <EmojiAvatar avatar="catgirl" />
         ) : (
-          <BotIcon className="user-avatar" />
+          <BotIcon className="user-avatar" width={config.AvatarSize} height={config.AvatarSize} />
         )}
       </div>
     );
@@ -45,14 +49,15 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
 }
 
 export function EmojiAvatar(props: { avatar: string; size?: number }) {
-  const emojiUrl = getEmojiUrl(props.avatar);
+  const config = useAppConfig()
+  const emojiUrl = props.avatar.startsWith("http") ? props.avatar : getEmojiUrl(props.avatar);
   return (
     <img
       className="user-avatar"
       src={emojiUrl}
-      alt="emoji"
-      width={props.size ?? 40} 
-      height={props.size ?? 40}
+      alt="avatar"
+      width={props.size ?? config.AvatarSize} 
+      height={props.size ?? config.AvatarSize}
     />
   );
 }

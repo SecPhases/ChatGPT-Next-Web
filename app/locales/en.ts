@@ -491,6 +491,10 @@ const en: LocaleType = {
     Code: "Detected access code from url, confirm to apply? ",
     Settings: "Detected settings from url, confirm to apply?",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default en;

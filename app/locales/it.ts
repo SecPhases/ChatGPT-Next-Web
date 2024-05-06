@@ -235,6 +235,10 @@ const it: PartialLocaleType = {
     Topic: "Argomento",
     Time: "Tempo",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default it;

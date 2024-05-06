@@ -28,6 +28,7 @@ export enum Theme {
 export const DEFAULT_CONFIG = {
   lastUpdate: Date.now(), // timestamp, to merge state
 
+  AvatarSize: 30,
   submitKey: SubmitKey.Enter,
   avatar: "1f603",
   fontSize: 14,
@@ -49,7 +50,7 @@ export const DEFAULT_CONFIG = {
     model: "CatGirl" as ModelType,
     temperature: 1,
     top_p: 1,
-    max_tokens: 128000,
+    max_tokens: 19000,
     presence_penalty: 0.8,
     frequency_penalty: 0,
     sendMemory: true,

@@ -239,6 +239,10 @@ const ru: PartialLocaleType = {
     Topic: "Тема",
     Time: "Время",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default ru;

@@ -232,6 +232,10 @@ const ko: PartialLocaleType = {
     Topic: "주제",
     Time: "시간",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default ko;

@@ -494,6 +494,10 @@ const sk: PartialLocaleType = {
     Code: "Zistený prístupový kód z URL, potvrdiť na aplikovanie?",
     Settings: "Zistené nastavenia z URL, potvrdiť na aplikovanie?",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default sk;

@@ -156,6 +156,10 @@ const no: PartialLocaleType = {
     Topic: "Emne",
     Time: "Tid",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default no;

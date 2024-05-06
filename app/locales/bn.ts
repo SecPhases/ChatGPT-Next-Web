@@ -329,6 +329,10 @@ const bn: PartialLocaleType = {
     Topic: "টপিক",
     Time: "সময়",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default bn;

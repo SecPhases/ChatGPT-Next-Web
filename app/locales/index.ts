@@ -103,7 +103,7 @@ const MEOW_LANG = 'me';
 function getLanguage() {
   try {
     const lang = navigator.language.toLowerCase();
-    return lang === 'cn' ? MEOW_LANG : lang;
+    return lang;
   } catch {
     return DEFAULT_LANG;
   }
@@ -139,5 +139,9 @@ export function getISOLang() {
   };
 
   const lang = getLang();
+  if (lang === 'cn') {
+    return MEOW_LANG;
+  }
+
   return isoLangString[lang] ?? lang;
 }

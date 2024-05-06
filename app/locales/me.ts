@@ -7,79 +7,79 @@ const me = {
   WIP: "该功能仍在开发喵~",
   Error: {
     Unauthorized: isApp
-      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确"
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key",
   },
   Auth: {
     Title: "主人，需要密码喵",
-    Tips: "主人开启了密码验证，请在下方填入访问码喵。",
-    SubTips: "或者输入你的 OpenAI 或 Google API 密钥喵。",
-    Input: "在此处填写访问码。",
-    Confirm: "确认喵。",
-    Later: "稍后再说喵。",
+    Tips: "主人开启了密码验证，请在下方填入访问码喵",
+    SubTips: "或者输入你的 OpenAI 或 Google API 密钥喵",
+    Input: "在此处填写访问码",
+    Confirm: "确认喵",
+    Later: "稍后再说喵",
   },
   ChatItem: {
-    ChatItemCount: (count: number) => `${count} 条对话喵。`,
+    ChatItemCount: (count: number) => `${count} 条对话喵`,
   },
   Chat: {
-    SubTitle: (count: number) => `共 ${count} 条对话喵。`,
+    SubTitle: (count: number) => `共 ${count} 条对话喵`,
     EditMessage: {
-      Title: "编辑消息记录喵。",
+      Title: "编辑消息记录喵",
       Topic: {
-        Title: "聊天主题喵。",
-        SubTitle: "更改当前聊天主题喵。",
+        Title: "聊天主题喵",
+        SubTitle: "更改当前聊天主题喵",
       },
     },
     Actions: {
-      ChatList: "查看消息列表喵。",
-      CompressedHistory: "查看压缩后的历史 Prompt喵。",
-      Export: "导出聊天记录喵。",
-      Copy: "复制。",
-      Stop: "停止。",
-      Retry: "重试。",
-      Pin: "固定。",
-      PinToastContent: "已将 1 条对话固定至预设提示词。",
-      PinToastAction: "查看。",
-      Delete: "删除。",
-      Edit: "编辑。",
+      ChatList: "查看消息列表喵",
+      CompressedHistory: "查看压缩后的历史 Prompt喵",
+      Export: "导出聊天记录喵",
+      Copy: "复制",
+      Stop: "停止",
+      Retry: "重试",
+      Pin: "固定",
+      PinToastContent: "已将 1 条对话固定至预设提示词",
+      PinToastAction: "查看",
+      Delete: "删除",
+      Edit: "编辑",
     },
     Commands: {
-      new: "新建聊天。",
-      newm: "从面具新建聊天。",
-      next: "下一个聊天。",
-      prev: "上一个聊天。",
-      clear: "清除上下文。",
-      del: "从主人的记录中删除聊天。",
+      new: "新建聊天",
+      newm: "从面具新建聊天",
+      next: "下一个聊天",
+      prev: "上一个聊天",
+      clear: "清除上下文",
+      del: "从主人的记录中删除聊天",
     },
     InputActions: {
-      Stop: "停止响应。",
-      ToBottom: "滚到最新。",
+      Stop: "停止响应",
+      ToBottom: "滚到最新",
       Theme: {
-        auto: "自动主题。",
-        light: "亮色模式。",
-        dark: "深色模式。",
+        auto: "自动主题",
+        light: "亮色模式",
+        dark: "深色模式",
       },
-      Prompt: "快捷指令。",
-      Masks: "所有面具。",
-      Clear: "清除聊天。",
-      Settings: "对话设置。",
-      UploadImage: "上传图片。",
+      Prompt: "快捷指令",
+      Masks: "所有面具",
+      Clear: "清除聊天",
+      Settings: "对话设置",
+      UploadImage: "上传图片",
     },
-    Rename: "重命名对话。",
+    Rename: "重命名对话",
     Typing: "猫娘正在输入喵…",
     Input: (submitKey: string) => {
-      var inputHints = `${submitKey} 发送喵。`;
+      var inputHints = `${submitKey} 发送喵`;
       if (submitKey === String(SubmitKey.Enter)) {
-        inputHints += "，Shift + Enter 换行。";
+        inputHints += "，Shift + Enter 换行";
       }
-      return inputHints + "，/ 触发补全，: 触发命令。";
+      return inputHints + "，/ 触发补全，: 触发命令";
     },
-    Send: "发送。",
+    Send: "发送",
     Config: {
-      Reset: "为清除猫娘记忆。",
-      SaveAs: "存为面具。",
+      Reset: "为清除猫娘记忆",
+      SaveAs: "存为面具",
     },
-    IsContext: "预设提示词。",
+    IsContext: "预设提示词",
   },
   Export: {
     Title: "主人的聊天记录分享",
@@ -146,76 +146,76 @@ const me = {
       Name: "Language", // 注意: 如果要添加新的翻译，请不要翻译这个值，保留为‘Language’
       All: "所有语言喵",
     },
-    Avatar: "头像喵。",
+    Avatar: "头像喵",
     FontSize: {
-      Title: "字体大小。",
-      SubTitle: "设置聊天内容的字体大小。",
+      Title: "字体大小",
+      SubTitle: "设置聊天内容的字体大小",
     },
     InjectSystemPrompts: {
-      Title: "注入系统级提示信息。",
-      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示。",
+      Title: "注入系统级提示信息",
+      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",
     },
     InputTemplate: {
-      Title: "用户输入预处理。",
-      SubTitle: "用户最新的一条消息会填充到此模板。",
+      Title: "用户输入预处理",
+      SubTitle: "用户最新的一条消息会填充到此模板",
     },
     Update: {
-      Version: (x: string) => `当前版本：${x}喵。`,
-      IsLatest: "已是最新版本。",
-      CheckUpdate: "检查更新。",
+      Version: (x: string) => `当前版本：${x}喵`,
+      IsLatest: "已是最新版本",
+      CheckUpdate: "检查更新",
       IsChecking: "正在检查更新...",
-      FoundUpdate: (x: string) => `发现新版本：${x}喵。`,
-      GoToUpdate: "前往更新。",
+      FoundUpdate: (x: string) => `发现新版本：${x}喵`,
+      GoToUpdate: "前往更新",
     },
-    SendKey: "发送键。",
-    Theme: "主题。",
-    TightBorder: "无边框模式。",
+    SendKey: "发送键",
+    Theme: "主题",
+    TightBorder: "无边框模式",
     SendPreviewBubble: {
-      Title: "预览气泡。",
-      SubTitle: "在预览气泡中预览 Markdown 内容。",
+      Title: "预览气泡",
+      SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     AutoGenerateTitle: {
-      Title: "自动生成标题。",
-      SubTitle: "根据对话内容生成合适的标题。",
+      Title: "自动生成标题",
+      SubTitle: "根据对话内容生成合适的标题",
     },
     Sync: {
-      CloudState: "云端数据喵。",
-      NotSyncYet: "还没有进行过同步。",
-      Success: "同步成功。",
-      Fail: "同步失败喵。",
+      CloudState: "云端数据喵",
+      NotSyncYet: "还没有进行过同步",
+      Success: "同步成功",
+      Fail: "同步失败喵",
       Config: {
         Modal: {
-          Title: "配置云同步。",
-          Check: "检查可用性。",
+          Title: "配置云同步",
+          Check: "检查可用性",
         },
         SyncType: {
-          Title: "同步类型。",
-          SubTitle: "选择喜爱的同步服务器喵。",
+          Title: "同步类型",
+          SubTitle: "选择喜爱的同步服务器喵",
         },
         Proxy: {
-          Title: "启用代理。",
-          SubTitle: "在浏览器中同步时，必须启用代理以避免跨域限制。",
+          Title: "启用代理",
+          SubTitle: "在浏览器中同步时，必须启用代理以避免跨域限制",
         },
         ProxyUrl: {
-          Title: "代理地址喵。",
-          SubTitle: "仅适用于本项目自带的跨域代理。",
+          Title: "代理地址喵",
+          SubTitle: "仅适用于本项目自带的跨域代理",
         },
         WebDav: {
-          Endpoint: "WebDAV 地址。",
-          UserName: "用户名。",
-          Password: "密码喵。",
+          Endpoint: "WebDAV 地址",
+          UserName: "用户名",
+          Password: "密码喵",
         },
         UpStash: {
-          Endpoint: "UpStash Redis REST Url。",
-          UserName: "备份名称。",
-          Password: "UpStash Redis REST Token。",
+          Endpoint: "UpStash Redis REST Url",
+          UserName: "备份名称",
+          Password: "UpStash Redis REST Token",
         },
       },
-      LocalState: "本地数据。",
+      LocalState: "本地数据",
       Overview: (overview: any) => {
-        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个面具喵。`;
+        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个面具喵`;
       },
-      ImportFailed: "导入失败。",
+      ImportFailed: "导入失败",
     },
     Mask: {
       Splash: {
@@ -268,62 +268,62 @@ const me = {
       AccessCode: {
           Title: "访问密码",
           SubTitle: "主人已开启加密访问",
-          Placeholder: "请输入访问密码。",
+          Placeholder: "请输入访问密码",
       },
       CustomEndpoint: {
-          Title: "自定义接口喵。",
-          SubTitle: "是否使用自定义 Azure 或 OpenAI 服务。",
+          Title: "自定义接口喵",
+          SubTitle: "是否使用自定义 Azure 或 OpenAI 服务",
       },
       Provider: {
-          Title: "模型服务商。",
-          SubTitle: "切换不同的服务商。",
+          Title: "模型服务商",
+          SubTitle: "切换不同的服务商",
       },
       OpenAI: {
           ApiKey: {
-              Title: "API Key。",
-              SubTitle: "使用自定义 OpenAI Key 绕过密码访问限制。",
-              Placeholder: "OpenAI API Key。",
+              Title: "API Key",
+              SubTitle: "使用自定义 OpenAI Key 绕过密码访问限制",
+              Placeholder: "OpenAI API Key",
           },
           Endpoint: {
-              Title: "接口地址。",
-              SubTitle: "除默认地址外，必须包含 http(s)://。",
+              Title: "接口地址",
+              SubTitle: "除默认地址外，必须包含 http(s)://",
           },
       },
       Azure: {
           ApiKey: {
-              Title: "接口密钥。",
-              SubTitle: "使用自定义 Azure Key 绕过密码访问限制。",
+              Title: "接口密钥",
+              SubTitle: "使用自定义 Azure Key 绕过密码访问限制",
               Placeholder: "Azure API Key",
           },
           Endpoint: {
-              Title: "接口地址。",
+              Title: "接口地址",
               SubTitle: "样例：",
           },
           ApiVerion: {
-              Title: "接口版本 (azure api version)。",
-              SubTitle: "选择指定的部分版本。",
+              Title: "接口版本 (azure api version)",
+              SubTitle: "选择指定的部分版本",
           },
       },
       Anthropic: {
           ApiKey: {
-              Title: "接口密钥。",
-              SubTitle: "使用自定义 Anthropic Key 绕过密码访问限制。",
-              Placeholder: "Anthropic API Key。",
+              Title: "接口密钥",
+              SubTitle: "使用自定义 Anthropic Key 绕过密码访问限制",
+              Placeholder: "Anthropic API Key",
           },
           Endpoint: {
-              Title: "接口地址。",
+              Title: "接口地址",
               SubTitle: "样例：",
           },
           ApiVerion: {
-              Title: "接口版本 (claude api version)。",
-              SubTitle: "选择一个特定的 API 版本输入。",
+              Title: "接口版本 (claude api version)",
+              SubTitle: "选择一个特定的 API 版本输入",
           },
       },
       Google: {
           ApiKey: {
-              Title: "API 密钥。",
-              SubTitle: "从 Google AI 获取您的 API 密钥。",
-              Placeholder: "输入您的 Google AI Studio API 密钥。",
+              Title: "API 密钥",
+              SubTitle: "从 Google AI 获取您的 API 密钥",
+              Placeholder: "输入您的 Google AI Studio API 密钥",
           },
 
         Endpoint: {
@@ -365,59 +365,59 @@ const me = {
     },
   },
   Store: {
-    DefaultTopic: "新的聊天喵。",
+    DefaultTopic: "新的聊天喵",
     BotHello: "有什么可以帮到主人的喵？",
-    Error: "出错了喵，稍后重试吧。",
+    Error: "出错了喵，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要喵：" + content,
       Topic:
-        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，不要加粗，如果没有主题，请直接返回'闲聊'喵。",
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，不要加粗，如果没有主题，请直接返回'闲聊'喵",
       Summarize:
-        "简要总结一下对话内容，用作后续的上下文提示 prompt，控制在 200 字以内喵。",
+        "简要总结一下对话内容，用作后续的上下文提示 prompt，控制在 200 字以内喵",
     },
   },
   Copy: {
-    Success: "已写入剪切板喵。",
-    Failed: "复制失败喵，请赋予剪切板权限。",
+    Success: "已写入剪切板喵",
+    Failed: "复制失败喵，请赋予剪切板权限",
   },
   Download: {
-    Success: "内容已下载到您的目录喵。",
-    Failed: "下载失败喵。",
+    Success: "内容已下载到您的目录喵",
+    Failed: "下载失败喵",
   },
   Context: {
     Toast: (x: any) => `包含 ${x} 条预设提示词喵`,
     Edit: "当前对话设置喵",
     Add: "新增一条对话喵",
-    Clear: "上下文已清除。",
-    Revert: "恢复上下文。",
+    Clear: "上下文已清除",
+    Revert: "恢复上下文",
   },
   Plugin: {
-    Name: "插件。",
+    Name: "插件",
   },
   FineTuned: {
     Sysmessage: "你是一个助手",
   },
   Mask: {
-    Name: "面具。",
+    Name: "面具",
     Page: {
-      Title: "预设角色面具。",
+      Title: "预设角色面具",
       SubTitle: (count: number) => `${count} 个预设角色定义喵`,
-      Search: "搜索角色面具。",
-      Create: "新建。",
+      Search: "搜索角色面具",
+      Create: "新建",
     },
     Item: {
-      Info: (count: number) => `包含 ${count} 条预设对话。`,
-      Chat: "对话。",
-      View: "查看。",
-      Edit: "编辑。",
-      Delete: "删除。",
+      Info: (count: number) => `包含 ${count} 条预设对话`,
+      Chat: "对话",
+      View: "查看",
+      Edit: "编辑",
+      Delete: "删除",
       DeleteConfirm: "确认删除？",
     },
     EditModal: {
       Title: (readonly: boolean) =>
         `编辑预设面具 ${readonly ? "（只读）" : ""}`,
-      Download: "下载预设。",
-      Clone: "克隆预设。",
+      Download: "下载预设",
+      Clone: "克隆预设",
     },
     Config: {
       Avatar: "角色头像喵",
@@ -470,6 +470,10 @@ const me = {
     Messages: "消息喵",
     Topic: "主题",
     Time: "时间",
+  },
+  SideBar: {
+    Title: "CatChat",
+    SubTitle: "Build your own CatGirl.",
   },
 };
 

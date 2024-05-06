@@ -284,6 +284,10 @@ ${builtin} مدمجة، ${custom} تم تعريفها من قبل المستخد
     Topic: "الموضوع",
     Time: "الوقت",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default ar;

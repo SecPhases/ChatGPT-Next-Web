@@ -478,6 +478,10 @@ const pt: PartialLocaleType = {
     Settings:
       "Configurações detectadas a partir da url, confirmar para aplicar?",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default pt;

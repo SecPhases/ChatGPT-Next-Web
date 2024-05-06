@@ -480,6 +480,10 @@ const tw = {
     Topic: "主題",
     Time: "時間",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 type DeepPartial<T> = T extends object

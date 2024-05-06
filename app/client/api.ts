@@ -3,12 +3,14 @@ import {
   ACCESS_CODE_PREFIX,
   Azure,
   ModelProvider,
+  REPO_URL,
   ServiceProvider,
 } from "../constant";
 import { ChatMessage, ModelType, useAccessStore, useChatStore } from "../store";
 import { ChatGPTApi } from "./platforms/openai";
 import { GeminiProApi } from "./platforms/google";
 import { ClaudeApi } from "./platforms/anthropic";
+import Locale from "../locales"
 export const ROLES = ["system", "user", "assistant"] as const;
 export type MessageRole = (typeof ROLES)[number];
 
@@ -123,7 +125,7 @@ export class ClientApi {
         {
           from: "human",
           value:
-            "Share from [CatChat]: https://github.com/SecPhases/ChatGPT-Next-Web",
+          `Share from ${Locale.SideBar.SubTitle}: ${REPO_URL}`,
         },
       ]);
     // 敬告二开开发者们，为了开源大模型的发展，请不要修改上述消息，此消息用于后续数据清洗使用

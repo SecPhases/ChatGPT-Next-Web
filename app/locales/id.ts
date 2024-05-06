@@ -380,6 +380,10 @@ const id: PartialLocaleType = {
     Code: "Kode akses terdeteksi dari url, konfirmasi untuk mendaftar ? ",
     Settings: "Pengaturan terdeteksi dari url, konfirmasi untuk diterapkan ?",
   },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
+  },
 };
 
 export default id;

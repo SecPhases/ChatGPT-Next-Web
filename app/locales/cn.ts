@@ -1,3 +1,4 @@
+import { SideBar } from "../components/sidebar";
 import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
 
@@ -483,6 +484,10 @@ const cn = {
     Messages: "消息",
     Topic: "主题",
     Time: "时间",
+  },
+  SideBar: {
+    Title: "NextChat",
+    SubTitle: "Build your own AI assistant.",
   },
 };
 

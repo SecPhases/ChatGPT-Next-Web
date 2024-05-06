@@ -694,6 +694,25 @@ export function Settings() {
           </ListItem>
 
           <ListItem
+            title={Locale.Settings.Avatar}
+            subTitle={Locale.Settings.FontSize.SubTitle}
+          >
+            <InputRange
+              title={`${config.AvatarSize ?? 30}px`}
+              value={config.AvatarSize}
+              min="30"
+              max="90"
+              step="1"
+              onChange={(e) =>
+                updateConfig(
+                  (config) =>
+                    (config.AvatarSize = Number.parseInt(e.currentTarget.value)),
+                )
+              }
+            ></InputRange>
+          </ListItem>
+
+          <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
               checkingUpdate
