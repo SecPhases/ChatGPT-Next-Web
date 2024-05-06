@@ -18,6 +18,10 @@ import {
   getMessageImages,
   useMobileScreen,
 } from "../utils";
+import {
+  EmojiAvatar,
+  getEmojiUrl
+ } from "./emoji"
 
 import CopyIcon from "../icons/copy.svg";
 import LoadingIcon from "../icons/three-dots.svg";
@@ -413,8 +417,14 @@ export function PreviewActions(props: {
   );
 }
 
-function ExportAvatar(props: { avatar: string }) {
-  if (props.avatar === DEFAULT_MASK_AVATAR) {
+function ExportAvatar(props: { model?: ModelType; avatar?: string }) {
+  if (props.model?.startsWith("CatGirl")) {
+    return (
+      <div className="no-dark">
+        <EmojiAvatar avatar="catgirl" />
+      </div>
+    );
+  } else if (props.avatar === DEFAULT_MASK_AVATAR) {
     return (
       <img
         src={BotIcon.src}
@@ -547,14 +557,14 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-            <div className={styles["main-title"]}>NextChat</div>
+            <div className={styles["main-title"]}>CatChat</div>
             <div className={styles["sub-title"]}>
-              github.com/Yidadaa/ChatGPT-Next-Web
+              github.com/SecPhases/ChatGPT-Next-Web
             </div>
             <div className={styles["icons"]}>
-              <ExportAvatar avatar={config.avatar} />
+              <ExportAvatar avatar={config.avatar}/>
               <span className={styles["icon-space"]}>&</span>
-              <ExportAvatar avatar={mask.avatar} />
+              <ExportAvatar avatar={mask.avatar} model={mask.modelConfig.model}/>
             </div>
           </div>
           <div>
@@ -584,6 +594,7 @@ export function ImagePreviewer(props: {
               <div className={styles["avatar"]}>
                 <ExportAvatar
                   avatar={m.role === "user" ? config.avatar : mask.avatar}
+                  model={m.role === "user" ? undefined : mask.modelConfig.model}
                 />
               </div>
 

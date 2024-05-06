@@ -1,9 +1,8 @@
-import EmojiPicker, { EmojiStyle, Theme as EmojiTheme } from "emoji-picker-react";
+import EmojiPicker, { Theme as EmojiTheme } from "emoji-picker-react";
 import { ModelType } from "../store";
 
 import BotIcon from "../icons/bot.svg";
 import BlackBotIcon from "../icons/black-bot.svg";
-import CatGirlIcon from "../icons/catgirl.svg";
 
 export function getEmojiUrl(unified: string) {
   return `https://gcore.jsdelivr.net/gh/SecPhases/emoji-data/img-apple-64/${unified}.png`;
@@ -36,25 +35,24 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         ) : (
           <BotIcon className="user-avatar" />
         )}
-        {props.avatar && <EmojiAvatar avatar={props.avatar} />}
       </div>
     );
+  } else if (props.avatar) {
+    return (
+      <EmojiAvatar avatar={props.avatar} />
+    );
   }
-  return (
-    <div className="user-avatar">
-      {props.avatar && <EmojiAvatar avatar={props.avatar} />}
-    </div>
-  );
 }
 
 export function EmojiAvatar(props: { avatar: string; size?: number }) {
   const emojiUrl = getEmojiUrl(props.avatar);
   return (
     <img
+      className="user-avatar"
       src={emojiUrl}
       alt="emoji"
-      width={props.size ?? 32} 
-      height={props.size ?? 32}
+      width={props.size ?? 40} 
+      height={props.size ?? 40}
     />
   );
 }

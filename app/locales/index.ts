@@ -1,4 +1,5 @@
 import cn from "./cn";
+import me from "./me";
 import en from "./en";
 import pt from "./pt";
 import tw from "./tw";
@@ -24,6 +25,7 @@ export type { LocaleType, PartialLocaleType } from "./cn";
 
 const ALL_LANGS = {
   cn,
+  me,
   en,
   tw,
   pt,
@@ -50,6 +52,7 @@ export const AllLangs = Object.keys(ALL_LANGS) as Lang[];
 
 export const ALL_LANG_OPTIONS: Record<Lang, string> = {
   cn: "简体中文",
+  me: "喵体中文",
   en: "English",
   pt: "Português",
   tw: "繁體中文",
@@ -95,9 +98,12 @@ function setItem(key: string, value: string) {
   } catch {}
 }
 
+const MEOW_LANG = 'me';
+
 function getLanguage() {
   try {
-    return navigator.language.toLowerCase();
+    const lang = navigator.language.toLowerCase();
+    return lang === 'cn' ? MEOW_LANG : lang;
   } catch {
     return DEFAULT_LANG;
   }
