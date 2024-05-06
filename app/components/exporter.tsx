@@ -18,10 +18,7 @@ import {
   getMessageImages,
   useMobileScreen,
 } from "../utils";
-import {
-  EmojiAvatar,
-  getEmojiUrl
- } from "./emoji"
+import { ImageAvatar } from "./emoji"
 
 import CopyIcon from "../icons/copy.svg";
 import LoadingIcon from "../icons/three-dots.svg";
@@ -418,13 +415,13 @@ export function PreviewActions(props: {
 }
 
 function ExportAvatar(props: { model?: ModelType; avatar?: string }) {
-  if (props.model?.startsWith("CatGirl")) {
-    return (
-      <div className="no-dark">
-        <EmojiAvatar avatar="catgirl" />
-      </div>
-    );
-  } else if (props.avatar === DEFAULT_MASK_AVATAR) {
+  if (props.avatar === DEFAULT_MASK_AVATAR) {
+    if (props.model?.startsWith("CatGirl")) {
+      return (
+        // Replace the URL with your own
+        <ImageAvatar avatar="https://gcore.jsdelivr.net/gh/SecPhases/emoji-data/img-apple-64/catgirl.png" />
+      );
+    }
     return (
       <img
         src={BotIcon.src}

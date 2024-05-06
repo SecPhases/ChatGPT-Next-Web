@@ -114,6 +114,16 @@ export function MaskConfig(props: {
 
       <List>
         <ListItem title={Locale.Mask.Config.Avatar}>
+        <input
+              type="text"
+              value={props.mask.avatar}
+              placeholder="URL"
+              onChange={(e) =>
+                props.updateMask(
+                  (mask) => (mask.avatar = e.currentTarget.value),
+                )
+              }
+            ></input>
           <Popover
             content={
               <AvatarPicker

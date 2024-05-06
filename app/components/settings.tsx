@@ -683,14 +683,34 @@ export function Settings() {
             <input
               type="text"
               value={config.avatar}
-              placeholder="AvatarID"
+              placeholder="URL"
               onChange={(e) =>
                 config.update(
                   (config) => (config.avatar = e.currentTarget.value),
                 )
               }
             ></input>
-            <Avatar avatar={config.avatar} />
+            <Popover
+              onClose={() => setShowEmojiPicker(false)}
+              content={
+                <AvatarPicker
+                  onEmojiClick={(avatar: string) => {
+                    updateConfig((config) => (config.avatar = avatar));
+                    setShowEmojiPicker(false);
+                  }}
+                />
+              }
+              open={showEmojiPicker}
+            >
+              <div
+                className={styles.avatar}
+                onClick={() => {
+                  setShowEmojiPicker(!showEmojiPicker);
+                }}
+              >
+                <Avatar avatar={config.avatar} />
+              </div>
+            </Popover>
           </ListItem>
 
           <ListItem
